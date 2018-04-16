@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ChatBoxComponent } from './chat-box/chat-box.component';
 import { ChatFormComponent } from './chat-form/chat-form.component';
 import { ChatMessageComponent } from './chat-message/chat-message.component';
+import { FormsModule } from '@angular/forms';
+import { MessagesService } from './messages.service';
 
 
 @NgModule({
@@ -16,9 +18,12 @@ import { ChatMessageComponent } from './chat-message/chat-message.component';
     ChatMessageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    MessagesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,9 @@
 <div class="chatApp">
     <div class="chatBox">
-        <h1>Hi! Current user name is <input type="text" placeholder="leave blank if it's you"></h1>
-        <app-chat-box></app-chat-box>
+        <h1>Hi! Current user name is <input type="text" placeholder="leave blank if it's you" [(ngModel)]="user" ></h1>
+        <app-chat-box [messages]="messages"></app-chat-box>
     </div>
     <div class="chatForm">
-        <app-chat-form></app-chat-form>
+        <app-chat-form (change)="getMessage()" user="{{ user }}"></app-chat-form>
     </div>
 </div>

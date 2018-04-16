@@ -9,7 +9,7 @@
 .chatBox {
     display: inline-block;
     width: 600px;
-    min-height: 500px;
+    height: 500px;
     background-color: #fff;
     border: 1px solid #eef1f4;
     border-bottom: none;
