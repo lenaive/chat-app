@@ -1,25 +1,22 @@
 import { Injectable } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class MessagesService {
 
-  messages: Array<string>;
-  msgObs$: Observable<string[]>;
+  messages = [];
+  messages$ = new Subject();
 
   constructor() {
-    this.messages = [];
   }
 
   setMessages(message) {
     this.messages.push(message);
+    this.messages$.next(this.messages);
   }
 
   getMessages() {
-    this.msgObs$ = new Observable<string[]>((observer) => {
-        observer.next(this.messages);
-    });
-    return this.msgObs$;
+    return this.messages$;
   }
 
 }

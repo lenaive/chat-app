@@ -1,0 +1,12 @@
+<div class="chatApp">
+  <div class="chatBox">
+    <!--<h1>Hi! Current user name is <input type="text" placeholder="leave blank if it's you" [(ngModel)]="user" ></h1>-->
+    <h1>You are talking to <span style="text-transform: capitalize">{{ userName }}</span></h1>
+    <app-chat-box [messages]="messages"></app-chat-box>
+  </div>
+  <div class="chatForm">
+    <app-chat-form user="{{ user }}"></app-chat-form>
+  </div>
+  <a routerLink="/contacts">Click here for more contacts 🙋‍♂️</a>
+
+</div>

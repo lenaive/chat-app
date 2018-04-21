@@ -1,0 +1,17 @@
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    transform: translateY(-50px);
+}
+.contactsBox {
+    display: inline-block;
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #eef1f4;
+    border-radius: 5px;
+    padding: 20px 0;
+}

@@ -8,7 +8,7 @@ import { MessagesService } from '../messages.service';
 })
 export class ChatBoxComponent implements OnInit {
 
-  @Input() messages: Array<string>;
+  @Input() messages: any;
 
   constructor(public messagesService: MessagesService) { }
 
