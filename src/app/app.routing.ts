@@ -3,11 +3,11 @@ import {ChatRoomComponent} from './chat-room/chat-room.component';
 import {ContactsComponent} from './contacts/contacts.component';
 
 const appRoutes: Routes = [
-    { path: 'chatRoom/:userName', component: ChatRoomComponent },
+    { path: 'chatRoom', component: ChatRoomComponent },
     { path: 'contacts', component: ContactsComponent },
     {
         path: '',
-        redirectTo: '/contacts',
+        redirectTo: '/chatRoom',
         pathMatch: 'full'
     }
 ];

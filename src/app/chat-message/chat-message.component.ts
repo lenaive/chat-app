@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Message} from '../messages';
 
 @Component({
   selector: 'app-chat-message',
@@ -7,22 +8,25 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ChatMessageComponent implements OnInit {
 
-  @Input() user: string;
-  @Input() message: string;
+  @Input() message: Message;
+  @Input() itsMe: string;
 
-  time: string;
   isSelf: boolean;
 
-  constructor() { }
+  time;
+
+  constructor() {
+  }
 
   ngOnInit() {
-    const currentTime = new Date();
+    this.isSelf = this.message.username === 'Jorge';
+    const currentTime = new Date(this.message.timestamp);
     const min = currentTime.getMinutes() < 10 ? `0${currentTime.getMinutes()}` : currentTime.getMinutes();
     const hour = currentTime.getHours();
     this.time = `${hour}:${min}`;
-    this.isSelf = this.user === '';
-    const chatMessages =  document.querySelector('.chatMessages');
-    chatMessages.scrollTop = chatMessages.scrollHeight + 200;
+      const chatMessages =  document.querySelector('.chatMessages');
+      chatMessages.scrollTop = chatMessages.scrollHeight + 200;
+
   }
 
 }

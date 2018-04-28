@@ -11,7 +11,6 @@ export class ChatFormComponent implements OnInit {
   @Input() user: string;
 
   message: string;
-  userName: string;
 
   constructor(public messagesService: MessagesService) {
   }
@@ -24,10 +23,10 @@ export class ChatFormComponent implements OnInit {
       return;
     }
     if (event.key === 'Enter' || event.type === 'click') {
-      this.userName = this.user !== 'undefined' ? this.user : '';
       this.messagesService.setMessages({
-          'message': this.message,
-          'user': this.userName
+          username: this.user,
+          message: this.message,
+          timestamp: new Date().getTime()
       });
 
       // Resolver con async

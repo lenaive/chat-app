@@ -12,8 +12,12 @@ import { ChatRoomComponent } from './chat-room/chat-room.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { routing } from './app.routing';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
-import {UsersService} from './users.service';
-import {HttpClientModule} from '@angular/common/http';
+import { UsersService } from './users.service';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+import {AngularFirestore} from 'angularfire2/firestore';
 
 
 @NgModule({
@@ -30,11 +34,14 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [
     MessagesService,
-    UsersService
+    UsersService,
+    AngularFirestore
   ],
   bootstrap: [AppComponent]
 })

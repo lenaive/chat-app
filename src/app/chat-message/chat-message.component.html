@@ -1,7 +1,7 @@
-<div class="chatMessage">
+<div class="chatMessage" *ngIf="message.message">
   <div class="message" [class.self]="isSelf" >
-    <span class="author" *ngIf="user">{{ user }}</span>
-    <p>{{ message }}</p>
+    <span class="author">{{ message.username }}</span>
+    <p>{{ message.message }}</p>
     <span class="time">{{ time }}</span>
   </div>
 </div>

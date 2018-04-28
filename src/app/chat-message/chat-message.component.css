@@ -5,18 +5,19 @@
 }
 .message {
     background-color: #e8f3f8;
-    padding: 30px 15px 15px;
+    padding: 15px 15px;
     position: relative;
     display: inline-block;
     border-radius: 10px;
     color: #666666;
     margin-bottom: 5px;
+    min-width: 50px;
  }
 .message .author {
-    position: absolute;
-    top: 10px;
-    left: 15px;
+    display: block;
     font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: 5px;
 }
 .message .time {
     position: absolute;

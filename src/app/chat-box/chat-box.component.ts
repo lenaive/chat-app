@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { MessagesService } from '../messages.service';
+import {Message} from '../messages';
 
 @Component({
   selector: 'app-chat-box',
@@ -8,9 +9,9 @@ import { MessagesService } from '../messages.service';
 })
 export class ChatBoxComponent implements OnInit {
 
-  @Input() messages: any;
+  @Input() messages: Message;
 
-  constructor(public messagesService: MessagesService) { }
+  constructor(public messagesService: MessagesService) {}
 
   ngOnInit() {
 
