@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { MessagesService } from '../messages.service';
 import {Message} from '../messages';
 
 @Component({
@@ -11,7 +10,7 @@ export class ChatBoxComponent implements OnInit {
 
   @Input() messages: Message;
 
-  constructor(public messagesService: MessagesService) {}
+  constructor() {}
 
   ngOnInit() {
 
