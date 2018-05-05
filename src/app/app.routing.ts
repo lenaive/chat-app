@@ -7,7 +7,7 @@ const appRoutes: Routes = [
     { path: 'contacts', component: ContactsComponent },
     {
         path: '',
-        redirectTo: '/chatRoom',
+        redirectTo: '/contacts',
         pathMatch: 'full'
     }
 ];

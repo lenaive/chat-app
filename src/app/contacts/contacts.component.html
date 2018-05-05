@@ -1,5 +1,9 @@
 <div class="contacts">
   <div class="contactsBox">
+      <div class="addContact">
+          <div class="addButton" (click)="toggleModal()"></div>
+      </div>
       <app-contact-info *ngFor="let contact of contacts" [contact]="contact"></app-contact-info>
   </div>
 </div>
+<app-add-contact *ngIf="modalIsVisible" (close)="toggleModal()"></app-add-contact>

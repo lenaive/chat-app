@@ -6,10 +6,19 @@
     min-height: 100vh;
     transform: translateY(-50px);
 }
+@media screen and (max-height: 740px) {
+    .chatApp {
+        justify-content: flex-start;
+        transform: none;
+        margin-top: 20px;
+    }
+}
 .chatBox {
     display: inline-block;
-    width: 600px;
-    height: 500px;
+    width: 90%;
+    max-width: 600px;
+    height: 80vh;
+    max-height: 500px;
     background-color: #fff;
     border: 1px solid #eef1f4;
     border-bottom: none;
@@ -34,7 +43,8 @@
 }
 .chatForm {
     background-color: #eef1f4;
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     height: 60px;
     border-radius: 0 0 5px 5px;
     border: 1px solid #eef1f4;
@@ -44,4 +54,11 @@ a {
     text-decoration: none;
     font-size: 16px;
     margin-top: 30px;
+    margin-bottom: 50px;
+}
+.chatMessages {
+    padding: 20px;
+    height: 70vh;
+    max-height: 445px;
+    overflow-y: scroll;
 }

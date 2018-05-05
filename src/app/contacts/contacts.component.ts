@@ -9,12 +9,17 @@ import {UsersService} from '../users.service';
 export class ContactsComponent implements OnInit {
 
   contacts: Array<object>;
+  modalIsVisible = false;
 
   constructor(private userService: UsersService) {
   }
 
   ngOnInit() {
-      this.userService.getContacts().subscribe(data => { this.contacts = data['results'] } );
+      this.userService.getContacts().subscribe(data => { this.contacts = data['results']; } );
+  }
+
+  toggleModal () {
+    this.modalIsVisible = !this.modalIsVisible;
   }
 
 }

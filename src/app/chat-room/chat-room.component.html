@@ -3,7 +3,9 @@
     <!--<h1>Hi! Current user name is <input type="text" placeholder="leave blank if it's you" [(ngModel)]="user" ></h1>-->
     <!--<h1>You are talking to <span style="text-transform: capitalize">{{ userName }}</span></h1>-->
     <h1>Hi Angular! 👋</h1>
-    <app-chat-box [messages]="messages"></app-chat-box>
+    <div class="chatMessages">
+      <app-chat-message *ngFor="let message of messages" [message]="message"></app-chat-message>
+    </div>
   </div>
   <div class="chatForm">
     <app-chat-form user="Jorge"></app-chat-form>

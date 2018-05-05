@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Todo do list
+1. Guards para la vista de chat [Link a slide](http://slides.com/jonroji/angular#/7/22)
+2. Validación de dirección para meterlo en el usuario [Link a GMaps](https://developers.google.com/maps/documentation/javascript/places-autocomplete?hl=es-419)
+3. Arreglar el servicio de usuarios (Ver el repo original)
+4. Usar la lista de usuarios para seleccionar usuario para chat
+5. Usar varios arrays para tantos chats como queramos
+6. Animar las transiciones de las vistas y animar las apariciones de las burbujas de chat [Link a slide](http://slides.com/jonroji/angular#/11)
