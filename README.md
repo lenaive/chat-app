@@ -34,3 +34,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 4. Usar la lista de usuarios para seleccionar usuario para chat
 5. Usar varios arrays para tantos chats como queramos
 6. Animar las transiciones de las vistas y animar las apariciones de las burbujas de chat [Link a slide](http://slides.com/jonroji/angular#/11)
+7. Buscar info sobre testing (Angular.io/guide/testing)

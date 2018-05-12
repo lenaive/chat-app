@@ -25,9 +25,7 @@ export class ChatMessageComponent implements OnInit {
     const min = currentTime.getMinutes() < 10 ? `0${currentTime.getMinutes()}` : currentTime.getMinutes();
     const hour = currentTime.getHours();
     this.time = `${hour}:${min}`;
-      const chatMessages =  document.querySelector('.chatMessages');
-      chatMessages.scrollTop = chatMessages.scrollHeight + 200;
-
+    const chatMessages =  document.querySelector('.chatMessages');
+    chatMessages.scrollTop = chatMessages.scrollHeight + 200;
   }
-
 }
